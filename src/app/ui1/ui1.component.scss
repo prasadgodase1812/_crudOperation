@@ -1,0 +1,24 @@
+
+.main{
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    height: 250px;
+    width: 550px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.data{
+    padding: 10px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}

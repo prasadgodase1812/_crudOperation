@@ -1,0 +1,22 @@
+{
+  "details": [
+    {
+      "name": "test",
+      "cname": "test_1",
+      "city": "test_1 city",
+      "pin": "test_1 pin code",
+      "mobile": 9830408004,
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

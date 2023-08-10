@@ -1,0 +1,19 @@
+.container{
+    position: absolute;
+    top: 01%;
+    left: 25%;
+    border: 2px solid cadetblue;
+    width: 60%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgray;
+}
+
+.btn{
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}

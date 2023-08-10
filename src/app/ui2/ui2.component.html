@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <form [formGroup]="newform">
+                <div class="card">
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" placeholder="enter name" class="form-control" formControlName="name">
+                        <mat-error *ngIf="getControlByName('name').invalid && getControlByName('name').touched" style="color: red;">enter name</mat-error>
+                    </div>
+                    <div class="form-group">
+                        <label for="College Name">College Name</label>
+                        <input type="text" placeholder="newdata123i" class="form-control" formControlName="cname">
+                        <mat-error *ngIf="getControlByName('cname').invalid && getControlByName('cname').touched" style="color: red;">enter cname</mat-error>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="City">City</label>
+                        <input type="text" placeholder="decoded frontend" class="form-control" formControlName="city">
+                        <mat-error *ngIf="getControlByName('city').invalid && getControlByName('city').touched" style="color: red;">enter city</mat-error>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Pin">Pin</label>
+                        <input type="text" placeholder="enter pincode" class="form-control" formControlName="pin">
+                        <mat-error *ngIf="getControlByName('pin').invalid && getControlByName('pin').touched" style="color: red;">enter pincode</mat-error>
+                    </div><div class="form-group">
+                        <label for="Mobile No">Mobile No</label>
+                        <input type="number" placeholder="enter mobile number" class="form-control" formControlName="mobile">
+                        <mat-error *ngIf="getControlByName('mobile').invalid && getControlByName('mobile').touched" style="color: red;">enter mobile no</mat-error>
+                    </div>
+                        <div class="btn mt-2">
+                            <button class="btn btn-success" (click)="_postData()">submit</button>
+                            <button class="btn btn-primary" (click)="_updateUser()" >Update</button>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>College Name</th>
+                    <th>City</th>
+                    <th>Pincode</th>
+                    <th>Mob No</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let items of base; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{items.name}}</td>
+                    <td>{{items.cname}}</td>
+                    <td>{{items.city}}</td>
+                    <td>{{items.pin}}</td>
+                    <td>{{items.mobile}}</td>
+                    <td>
+                        <button class="btn btn-danger" (click)="_deleteUser(items.id)">Delete</button>
+                        <button class="btn btn-secondary" (click)="_editData(items)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
