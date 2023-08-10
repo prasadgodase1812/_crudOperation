@@ -1,21 +1,48 @@
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12">
-<div class="main">
-    <div class="data">
-      <label for="">Name</label>
-      <input type="text" placeholder="Name">
-      <label for="">Roll No</label>
-      <input type="number" placeholder="Roll No">
-      <label for="">City</label>
-      <input type="text" placeholder="City">
-    </div>
-    <div class="btn  ">
-      <button class="btn btn-success">Submit</button>
-      <button class="btn btn-primary">Edit</button>
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="main">
+        <div class="data">
+          <form [formGroup]="bootform">
+            <label for="">Name</label>
+            <input type="text" placeholder="Name" formControlName="name" class="form-control">
+            <label for="">Roll No</label>
+            <input type="number" placeholder="Roll No" formControlName="roll" class="form-control">
+            <label for="">City</label>
+            <input type="text" placeholder="City" formControlName="city" class="form-control">
+          </form>
+        </div>
+        <div class="btn  ">
+          <button class="btn btn-success"(click)="_postBootUser()">Submit</button>
+          <button class="btn btn-primary" (click)="_updateBootUser()">Update</button>
+        </div>
+      </div>
+
     </div>
   </div>
-  
-        </div>
-    </div>
 </div>
+<table class="table">
+  <thead>
+    <tr >
+      <th>Id</th>
+      <th>Name</th>
+      <th>College Name</th>
+      <th>City</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor=" let items of Boost,let i=index">
+      <td>{{i+1}}</td>
+      <td>{{items.name}}</td>
+      <td>{{items.roll}}</td>
+      <td>{{items.city}}</td>
+      <td>
+        <div class="btn">
+          <button class="btn btn-danger" (click)="_deleteBoostuser(items.id)">Delete</button>
+          <button class="btn btn-secondary" (click)="_editBootUser(items)">Edit</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

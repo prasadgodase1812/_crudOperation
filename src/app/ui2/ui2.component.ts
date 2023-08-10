@@ -30,12 +30,11 @@ export class Ui2Component implements OnInit {
   }
 
   ngOnInit() {
-    // this._getData();
   }
 
 
-  getControlByName(contolName: string): FormControl {
-    return this.newform.get(contolName) as FormControl;
+  getControlByName(controlName: string): FormControl {
+    return this.newform.get(controlName) as FormControl;
   }
 
   base: any;
@@ -64,7 +63,6 @@ export class Ui2Component implements OnInit {
     this.activeItem = items;
     this.newform.patchValue(items);
   }
-  update: any;
 
   _updateUser() {
     this.http.updatuser(this.activeItem?.id, this.newform.value).subscribe(res => {

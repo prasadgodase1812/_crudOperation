@@ -1,19 +1,20 @@
 {
   "details": [
     {
-      "name": "test",
-      "cname": "test_1",
-      "city": "test_1 city",
-      "pin": "test_1 pin code",
-      "mobile": 9830408004,
+      "name": "springer",
+      "cname": "nature",
+      "city": "pune",
+      "pin": "233211",
+      "mobile": 939993932,
       "id": 1
     }
   ],
-  "comments": [
+  "baseboot": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Whirlpool city",
+      "roll": 12,
+      "city": "sangola",
+      "id": 1
     }
   ],
   "profile": {
