@@ -45,20 +45,19 @@ _deleteBoostuser(id:any){
   })
 }
 
-activUser:any;
+activeUser:any;
 
-_editBootUser(item:any){
-this.activUser=item;
-this.bootform.patchValue(item);
+_editData(item:any){
+  this.bootform.patchValue(item);
+  this.activeUser=item;
 }
 
-_updateBootUser(){
-  return this.http.updateBoot(this.activUser?.id,this.bootform.value).subscribe(rees =>{
+
+_updateData(){
+  return this.http.updateBoot(this.activeUser.id,this.bootform.value).subscribe(res =>{
     this._getBootUser();
-    location.reload();
   })
 }
-
 
 
 }

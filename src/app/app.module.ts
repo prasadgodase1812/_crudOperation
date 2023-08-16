@@ -11,13 +11,15 @@ import { FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {HttpClientModule} from '@angular/common/http';
+import { Ui3Component } from './ui3/ui3.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     Ui1Component,
-    Ui2Component
+    Ui2Component,
+    Ui3Component,
   ],
   imports: [
     BrowserModule,

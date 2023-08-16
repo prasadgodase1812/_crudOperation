@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder, NgModel} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CrudserviceService } from '../services/crudservice.service';
-import { Observable, of, first } from 'rxjs';
+import { Observable, of, first, from } from 'rxjs';
+import { NgModule} from '@angular/core';
+import { FormsModule} from '@angular/forms'
 
 
 @Component({
@@ -14,6 +16,9 @@ export class Ui2Component implements OnInit {
 
   newform: FormGroup;
   activeItem: any;
+
+
+
 
   constructor(private fb: FormBuilder, private http: CrudserviceService) {
 
